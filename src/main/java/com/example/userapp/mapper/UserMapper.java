@@ -1,6 +1,6 @@
 package com.example.userapp.mapper;
 
-import com.example.userapp.dto.UpdateResponse;
+import com.example.userapp.dto.UpdateRequest;
 import com.example.userapp.dto.UserRequest;
 import com.example.userapp.dto.UserResponse;
 import com.example.userapp.model.User;
@@ -27,7 +27,7 @@ public class UserMapper {
                 .address(response.getAddress())
                 .build();
     }
-    public static User mapUpdateResponseToUser( User user ,UpdateResponse request){
+    public static User mapUpdateResponseToUser(User user , UpdateRequest request){
         user.setFirstName(request.getFirstName());
         user.setLastName(request.getLastName());
         user.setAddress(request.getAddress());

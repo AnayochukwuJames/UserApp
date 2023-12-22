@@ -1,6 +1,6 @@
 package com.example.userapp.service.userImp;
 
-import com.example.userapp.dto.UpdateResponse;
+import com.example.userapp.dto.UpdateRequest;
 import com.example.userapp.dto.UserRequest;
 import com.example.userapp.dto.UserResponse;
 import com.example.userapp.mapper.UserMapper;
@@ -33,7 +33,7 @@ public class UserImp implements UserService {
         return new ResponseEntity<>(UserMapper.mapUserResponse(user), HttpStatus.OK);
     }
     @Override
-    public ResponseEntity<UserResponse> updateUser(Long id, UpdateResponse request){
+    public ResponseEntity<UserResponse> updateUser(Long id, UpdateRequest request){
         User user = userRepository.findById(id).orElseThrow(()-> new RuntimeException("User dose not exist"));
         user = userRepository.save(UserMapper.mapUpdateResponseToUser(user, request));
         return new ResponseEntity<>(UserMapper.mapUserResponse(user),HttpStatus.OK);

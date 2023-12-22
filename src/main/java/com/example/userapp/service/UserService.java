@@ -1,6 +1,6 @@
 package com.example.userapp.service;
 
-import com.example.userapp.dto.UpdateResponse;
+import com.example.userapp.dto.UpdateRequest;
 import com.example.userapp.dto.UserRequest;
 import com.example.userapp.dto.UserResponse;
 import com.example.userapp.model.User;
@@ -13,7 +13,7 @@ public interface UserService {
 
     ResponseEntity<UserResponse> getUserById(Long id);
 
-    ResponseEntity<UserResponse> updateUser(Long id, UpdateResponse request);
+    ResponseEntity<UserResponse> updateUser(Long id, UpdateRequest request);
 
     ResponseEntity<List<UserResponse>> getAllUsers();
 

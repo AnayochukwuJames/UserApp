@@ -1,6 +1,6 @@
 package com.example.userapp.controller;
 
-import com.example.userapp.dto.UpdateResponse;
+import com.example.userapp.dto.UpdateRequest;
 import com.example.userapp.dto.UserRequest;
 import com.example.userapp.dto.UserResponse;
 import com.example.userapp.model.User;
@@ -24,8 +24,8 @@ public class UserController {
     }
 
     @PutMapping("update-user/{id}")
-    public ResponseEntity<UserResponse> updateUser(@PathVariable Long id, @RequestBody UpdateResponse updateResponse){
-        return userService.updateUser(id, updateResponse);
+    public ResponseEntity<UserResponse> updateUser(@PathVariable Long id, @RequestBody UpdateRequest request){
+        return userService.updateUser(id, request);
     }
     @GetMapping("get-All-Users")
     public ResponseEntity<List<UserResponse>> getAllUsers(){

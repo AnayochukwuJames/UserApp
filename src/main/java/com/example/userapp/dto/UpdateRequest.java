@@ -1,7 +1,6 @@
 package com.example.userapp.dto;
 
 import lombok.*;
-import org.hibernate.annotations.UpdateTimestamp;
 
 import java.util.Date;
 
@@ -10,7 +9,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class UpdateResponse {
+public class UpdateRequest {
     private String firstName;
     private String lastName;
     private String address;
