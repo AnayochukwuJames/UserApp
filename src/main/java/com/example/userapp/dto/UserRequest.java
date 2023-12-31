@@ -11,12 +11,6 @@ import javax.validation.constraints.Size;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserRequest {
-//    private String firstName;
-//    private String lastName;
-//    private String address;
-//    private String phoneNumber;
-//    private String email;
-//    private String password;
     @NotBlank(message = "first name must not be null")
     @Size(min = 3, message = "first name must not be minimum of 3 characters")
     private String firstName;
